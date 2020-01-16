@@ -5,5 +5,10 @@
         <span [class.comedy]="movie.category==='comedy'"> {{movie.category}}</span>,
          {{movie.year}}
     </li>
-    
 </ul>
+
+
+<label>Title<input [(ngModel)]="newTitle" type="text"></label><label>Title</label>
+<label>Year<input [(ngModel)]="newYear" type="text"></label>
+<label>Category<input [(ngModel)]="newCategory" type="text"></label>
+<button (click)="addMovie()">Add Movie</button> 

@@ -10,7 +10,10 @@ export class MoviesListComponent implements OnInit {
   @Input() movies:Movie[];
   @Input() name: String;
 
-
+  newTitle: string;
+  newCategory: string;
+  newYear: number;
+  
   constructor() { 
     
 
@@ -22,5 +25,8 @@ export class MoviesListComponent implements OnInit {
   details(movie: Movie){
     alert(`details for ${movie.title}`);
   }
-
+ addMovie(){
+   let movie = new Movie(this.newTitle, this.newCategory, this.newYear);
+   this.movies.push(movie);
+ }
 }
